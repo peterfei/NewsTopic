@@ -10,9 +10,16 @@ import UIKit
 class LFHomeViewController: UIViewController {
     // 当前选中的 titleLabel 的 上一个 titleLabel
     var oldIndex: Int = 0
+    /// 首页顶部标题
+    var homeTitles = [LFHomeTopTitle]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        // 有多少条文章更新
+        showRefreshTipView()
+        
+        // 处理标题的回调
+        homeTitleViewCallback()
     }
     
     private func setupUI() {
@@ -42,6 +49,65 @@ class LFHomeViewController: UIViewController {
         let titleView = LFScrollTitleView()
         return titleView
     }()
+    
+    /// 每次刷新显示的提示标题
+    private lazy var tipView: LFTipView = {
+        let tipView = LFTipView()
+        tipView.frame = CGRectMake(0, 44, SCREENW, 35)
+        // 加载 navBar 上面，不会随着 tableView 一起滚动
+        self.navigationController?.navigationBar.insertSubview(tipView, atIndex: 0)
+        return tipView
+    }()
+    
+    /// 有多少条文章更新
+    private func showRefreshTipView() {
+        LFNetworkTool.shareNetworkTool.loadArticleRefreshTip { [weak self] (count) in
+            self!.tipView.tipLabel.text = (count == 0) ? "暂无更新，请休息一会儿" : "今日头条推荐引擎有\(count)条刷新"
+            UIView.animateWithDuration(kAnimationDuration, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: UIViewAnimationOptions(rawValue: 0), animations: {
+                self!.tipView.tipLabel.transform = CGAffineTransformMakeScale(1.1, 1.1)
+                }, completion: { (_) in
+                    self!.tipView.tipLabel.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                    let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+                    dispatch_after(delayTime, dispatch_get_main_queue(), {
+                        self!.tipView.hidden = true
+                    })
+            })
+        }
+    }
+    
+    /// 处理标题的回调
+    private func  homeTitleViewCallback() {
+        // 返回标题的数量
+        titleView.titleArrayClosure { [weak self] (titleArray) in
+            self!.homeTitles = titleArray
+            // 归档标题数据
+//            self!.archiveTitles(titleArray)
+//            for topTitle in titleArray {
+//                print("topTitle is \(topTitle)")
+//                let topicVC = LFHomeTopicController()
+//                topicVC.topTitle = topTitle
+//                self!.addChildViewController(topicVC)
+//            }
+//            self!.scrollViewDidEndScrollingAnimation(self!.scrollView)
+//            self!.scrollView.contentSize = CGSizeMake(SCREENW * CGFloat(titleArray.count), SCREENH)
+        }
+        
+        // 添加按钮点击
+//        titleView.addButtonClickClosure { [weak self] in
+//            print(#function)
+//            let addTopicVC = YMAddTopicViewController()
+//            addTopicVC.myTopics = self!.homeTitles
+//            let nav = YMNavigationController(rootViewController: addTopicVC)
+//            self!.presentViewController(nav, animated: false, completion: nil)
+//        }
+        
+        // 点击了哪一个 titleLabel，然后 scrolleView 进行相应的偏移
+        titleView.didSelectTitleLableClosure { [weak self] (titleLabel) in
+            var offset = self!.scrollView.contentOffset
+            offset.x = CGFloat(titleLabel.tag) * self!.scrollView.width
+            self!.scrollView.setContentOffset(offset, animated: true)
+        }
+    }
 }
 
 extension LFHomeViewController: UIScrollViewDelegate {
