@@ -81,15 +81,15 @@ class LFHomeViewController: UIViewController {
         titleView.titleArrayClosure { [weak self] (titleArray) in
             self!.homeTitles = titleArray
             // 归档标题数据
-//            self!.archiveTitles(titleArray)
-//            for topTitle in titleArray {
-//                print("topTitle is \(topTitle)")
-//                let topicVC = LFHomeTopicController()
-//                topicVC.topTitle = topTitle
-//                self!.addChildViewController(topicVC)
-//            }
-//            self!.scrollViewDidEndScrollingAnimation(self!.scrollView)
-//            self!.scrollView.contentSize = CGSizeMake(SCREENW * CGFloat(titleArray.count), SCREENH)
+            self!.archiveTitles(titleArray)
+            for topTitle in titleArray {
+                print("topTitle is \(topTitle)")
+                let topicVC = LFHomeTopicController()
+                topicVC.topTitle = topTitle
+                self!.addChildViewController(topicVC)
+            }
+            self!.scrollViewDidEndScrollingAnimation(self!.scrollView)
+            self!.scrollView.contentSize = CGSizeMake(SCREENW * CGFloat(titleArray.count), SCREENH)
         }
         
         // 添加按钮点击
@@ -107,6 +107,14 @@ class LFHomeViewController: UIViewController {
             offset.x = CGFloat(titleLabel.tag) * self!.scrollView.width
             self!.scrollView.setContentOffset(offset, animated: true)
         }
+    }
+    
+    /// 归档标题数据
+    private func archiveTitles(titles: [LFHomeTopTitle]) {
+        let path: NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first!
+        let filePath = path.stringByAppendingPathComponent("top_titles.archive")
+        // 归档
+        NSKeyedArchiver.archiveRootObject(titles, toFile: filePath)
     }
 }
 

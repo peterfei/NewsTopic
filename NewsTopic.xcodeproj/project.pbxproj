@@ -12,6 +12,16 @@
 		882CC43C1D98C823003F4197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882CC43B1D98C823003F4197 /* Assets.xcassets */; };
 		882CC43F1D98C823003F4197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882CC43D1D98C823003F4197 /* LaunchScreen.storyboard */; };
 		882CC44A1D98C824003F4197 /* NewsTopicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882CC4491D98C824003F4197 /* NewsTopicTests.swift */; };
+		8861740D1D9A3DF500A4018E /* LFHomeTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861740C1D9A3DF500A4018E /* LFHomeTopicController.swift */; };
+		8861740F1D9A405400A4018E /* LFNewsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861740E1D9A405400A4018E /* LFNewsTopic.swift */; };
+		886174111D9A40BA00A4018E /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886174101D9A40BA00A4018E /* NSString+Extension.swift */; };
+		886174131D9A40E800A4018E /* UITableView+Extendtion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886174121D9A40E800A4018E /* UITableView+Extendtion.swift */; };
+		886174151D9A42A600A4018E /* LFPopViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886174141D9A42A600A4018E /* LFPopViewAnimator.swift */; };
+		886174171D9A431600A4018E /* LFPopPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886174161D9A431600A4018E /* LFPopPresentationController.swift */; };
+		886174191D9A439A00A4018E /* LFHomeSmallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886174181D9A439A00A4018E /* LFHomeSmallCell.swift */; };
+		8861741B1D9A440600A4018E /* LFHomeTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861741A1D9A440600A4018E /* LFHomeTopicCell.swift */; };
+		8861741D1D9A448600A4018E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861741C1D9A448600A4018E /* UIImageView+Extension.swift */; };
+		8861741F1D9A44A500A4018E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861741E1D9A44A500A4018E /* UIImage+Extension.swift */; };
 		8876B1D31D98D0C7004045C0 /* LFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B1D21D98D0C7004045C0 /* LFTabBarController.swift */; };
 		8876B1D51D98D13A004045C0 /* LFConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B1D41D98D13A004045C0 /* LFConst.swift */; };
 		8876B7BB1D98D2EF004045C0 /* LFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B7BA1D98D2EF004045C0 /* LFHomeViewController.swift */; };
@@ -45,6 +55,16 @@
 		882CC4451D98C824003F4197 /* NewsTopicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsTopicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		882CC4491D98C824003F4197 /* NewsTopicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTopicTests.swift; sourceTree = "<group>"; };
 		882CC44B1D98C824003F4197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8861740C1D9A3DF500A4018E /* LFHomeTopicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFHomeTopicController.swift; sourceTree = "<group>"; };
+		8861740E1D9A405400A4018E /* LFNewsTopic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFNewsTopic.swift; sourceTree = "<group>"; };
+		886174101D9A40BA00A4018E /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
+		886174121D9A40E800A4018E /* UITableView+Extendtion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extendtion.swift"; sourceTree = "<group>"; };
+		886174141D9A42A600A4018E /* LFPopViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFPopViewAnimator.swift; sourceTree = "<group>"; };
+		886174161D9A431600A4018E /* LFPopPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFPopPresentationController.swift; sourceTree = "<group>"; };
+		886174181D9A439A00A4018E /* LFHomeSmallCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFHomeSmallCell.swift; sourceTree = "<group>"; };
+		8861741A1D9A440600A4018E /* LFHomeTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFHomeTopicCell.swift; sourceTree = "<group>"; };
+		8861741C1D9A448600A4018E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		8861741E1D9A44A500A4018E /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		8876B1D21D98D0C7004045C0 /* LFTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFTabBarController.swift; sourceTree = "<group>"; };
 		8876B1D41D98D13A004045C0 /* LFConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFConst.swift; sourceTree = "<group>"; };
 		8876B7BA1D98D2EF004045C0 /* LFHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFHomeViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +216,8 @@
 			children = (
 				8876B7C11D9920EE004045C0 /* LFScrollTitleView.swift */,
 				8876B7C71D992909004045C0 /* LFTipView.swift */,
+				886174181D9A439A00A4018E /* LFHomeSmallCell.swift */,
+				8861741A1D9A440600A4018E /* LFHomeTopicCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -204,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				8876B7BA1D98D2EF004045C0 /* LFHomeViewController.swift */,
+				8861740C1D9A3DF500A4018E /* LFHomeTopicController.swift */,
+				886174161D9A431600A4018E /* LFPopPresentationController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				8876B7C31D9921B6004045C0 /* LFHomeTopTitle.swift */,
+				8861740E1D9A405400A4018E /* LFNewsTopic.swift */,
+				886174141D9A42A600A4018E /* LFPopViewAnimator.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -220,6 +246,10 @@
 			isa = PBXGroup;
 			children = (
 				8876B7BF1D991954004045C0 /* UIView+Extension.swift */,
+				886174101D9A40BA00A4018E /* NSString+Extension.swift */,
+				886174121D9A40E800A4018E /* UITableView+Extendtion.swift */,
+				8861741C1D9A448600A4018E /* UIImageView+Extension.swift */,
+				8861741E1D9A44A500A4018E /* UIImage+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -375,14 +405,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8861741B1D9A440600A4018E /* LFHomeTopicCell.swift in Sources */,
+				886174191D9A439A00A4018E /* LFHomeSmallCell.swift in Sources */,
 				8876B7C21D9920EE004045C0 /* LFScrollTitleView.swift in Sources */,
 				8876B7BB1D98D2EF004045C0 /* LFHomeViewController.swift in Sources */,
 				8876B7C01D991954004045C0 /* UIView+Extension.swift in Sources */,
+				886174131D9A40E800A4018E /* UITableView+Extendtion.swift in Sources */,
 				882CC4371D98C822003F4197 /* ViewController.swift in Sources */,
+				886174171D9A431600A4018E /* LFPopPresentationController.swift in Sources */,
 				8876B1D51D98D13A004045C0 /* LFConst.swift in Sources */,
 				882CC4351D98C822003F4197 /* AppDelegate.swift in Sources */,
+				8861741D1D9A448600A4018E /* UIImageView+Extension.swift in Sources */,
+				8861740F1D9A405400A4018E /* LFNewsTopic.swift in Sources */,
 				8876B7C61D992276004045C0 /* LFNetworkTool.swift in Sources */,
+				886174151D9A42A600A4018E /* LFPopViewAnimator.swift in Sources */,
 				8876B1D31D98D0C7004045C0 /* LFTabBarController.swift in Sources */,
+				8861741F1D9A44A500A4018E /* UIImage+Extension.swift in Sources */,
+				886174111D9A40BA00A4018E /* NSString+Extension.swift in Sources */,
+				8861740D1D9A3DF500A4018E /* LFHomeTopicController.swift in Sources */,
 				8876B7C81D992909004045C0 /* LFTipView.swift in Sources */,
 				8876B7C41D9921B6004045C0 /* LFHomeTopTitle.swift in Sources */,
 				8876B7BD1D98EDF7004045C0 /* LFNavigationController.swift in Sources */,
