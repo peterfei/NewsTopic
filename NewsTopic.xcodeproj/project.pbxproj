@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881EA6E11DDEFAFA0097D258 /* Pods_NewsTopic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881EA6E01DDEFAFA0097D258 /* Pods_NewsTopic.framework */; };
 		882CC4351D98C822003F4197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882CC4341D98C822003F4197 /* AppDelegate.swift */; };
 		882CC4371D98C822003F4197 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882CC4361D98C822003F4197 /* ViewController.swift */; };
 		882CC43C1D98C823003F4197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882CC43B1D98C823003F4197 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		8861741B1D9A440600A4018E /* LFHomeTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861741A1D9A440600A4018E /* LFHomeTopicCell.swift */; };
 		8861741D1D9A448600A4018E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861741C1D9A448600A4018E /* UIImageView+Extension.swift */; };
 		8861741F1D9A44A500A4018E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861741E1D9A44A500A4018E /* UIImage+Extension.swift */; };
+		8870D53C8891331D01B08DF0 /* Pods_NewsTopic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AEA0C2FFA1CFFD2972E50B /* Pods_NewsTopic.framework */; };
 		8876B1D31D98D0C7004045C0 /* LFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B1D21D98D0C7004045C0 /* LFTabBarController.swift */; };
 		8876B1D51D98D13A004045C0 /* LFConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B1D41D98D13A004045C0 /* LFConst.swift */; };
 		8876B7BB1D98D2EF004045C0 /* LFHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B7BA1D98D2EF004045C0 /* LFHomeViewController.swift */; };
@@ -31,7 +33,6 @@
 		8876B7C41D9921B6004045C0 /* LFHomeTopTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B7C31D9921B6004045C0 /* LFHomeTopTitle.swift */; };
 		8876B7C61D992276004045C0 /* LFNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B7C51D992276004045C0 /* LFNetworkTool.swift */; };
 		8876B7C81D992909004045C0 /* LFTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876B7C71D992909004045C0 /* LFTipView.swift */; };
-		B08CEE02755344C3B2696CE9 /* Pods_NewsTopic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AEA0C2FFA1CFFD2972E50B /* Pods_NewsTopic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		04C0E1C7D90F14A188110D2F /* Pods-NewsTopic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTopic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsTopic/Pods-NewsTopic.debug.xcconfig"; sourceTree = "<group>"; };
+		881EA6E01DDEFAFA0097D258 /* Pods_NewsTopic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_NewsTopic.framework; path = "Pods/../build/Debug-iphoneos/Pods_NewsTopic.framework"; sourceTree = "<group>"; };
 		882CC4311D98C821003F4197 /* NewsTopic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsTopic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882CC4341D98C822003F4197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		882CC4361D98C822003F4197 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B08CEE02755344C3B2696CE9 /* Pods_NewsTopic.framework in Frameworks */,
+				881EA6E11DDEFAFA0097D258 /* Pods_NewsTopic.framework in Frameworks */,
+				8870D53C8891331D01B08DF0 /* Pods_NewsTopic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +103,7 @@
 		5D4D46F1C0C1C5C0791DA712 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				881EA6E01DDEFAFA0097D258 /* Pods_NewsTopic.framework */,
 				99AEA0C2FFA1CFFD2972E50B /* Pods_NewsTopic.framework */,
 			);
 			name = Frameworks;
@@ -365,7 +369,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BA1D7E9EE07AF3130256BD50 /* [CP] Embed Pods Frameworks */ = {
@@ -549,10 +553,16 @@
 			baseConfigurationReference = 04C0E1C7D90F14A188110D2F /* Pods-NewsTopic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = NewsTopic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.peterfei.NewsTopic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -561,10 +571,16 @@
 			baseConfigurationReference = A4B90C48CB601C011A76FD71 /* Pods-NewsTopic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = NewsTopic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.peterfei.NewsTopic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
